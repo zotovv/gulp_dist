@@ -1,0 +1,7 @@
+@import "_default.styl"
+
+for i in styles
+  @import '../'+i
+
+if animate_css == true
+  @import '../libs/animate.styl'

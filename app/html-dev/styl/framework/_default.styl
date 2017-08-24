@@ -1,0 +1,151 @@
+@import "../_core.styl";
+
+bg(urls, positionr, psr)
+ background-image url('../img/'+urls)
+ if positionr == 'c'
+  background-position center center
+ else if positionr == 'lt'
+  background-position left top
+ else if positionr == 'ct'
+  background-position center top
+ else if positionr == 'rt'
+  background-position right top
+ else if positionr == 'lc'
+  background-position left center
+ else if positionr == 'rc'
+  background-position right center
+ else if positionr == 'cc'
+  background-position center center
+ else if positionr == 'lb'
+  background-position left bottom
+ else if positionr == 'rb'
+  background-position right bottom
+ else if positionr == 'cb'
+  background-position center bottom
+ else if positionr == 'cover'
+  background-size cover
+ else if positionr == 'ccc'
+  background-size cover
+  background-position center center
+ else if positionr == 'contain'
+  background-size contain
+ else
+  background-position positionr
+ if psr == "r"
+  background-repeat repeat
+ else
+  background-repeat no-repeat
+
+clear()
+ &:after
+  display table
+  clear both
+  content ""
+
+tr(t)
+  transition all (t)s ease
+
+if(responsive == true)
+ .mainwrapper_wrap
+	 max-width wrapper
+	 width 100%
+	 margin auto
+else
+ *
+	 max-height 99999px
+
+ html
+	 -webkit-text-size-adjust none
+
+ .mainwrapper
+ 	min-width wrapper
+   &_wrap
+     width wrapper
+     margin auto
+
+// Normalizer
+body
+ min-width 300px
+ padding 0
+ 
+input
+  -webkit-appearance: none
+  border-radius 0px
+
+html,body,figure,hr
+ margin 0
+ padding 0
+
+.mainwrapper *
+ box-sizing border-box
+
+input,button,textarea,select,option
+ outline none !important
+
+input::-ms-clear
+   display none
+ 
+article,aside,footer,header,nav,section,audio,video
+ display block
+
+img
+ border 0
+ max-width 100%
+ vertical-align top
+
+button,input
+ line-height normal
+
+.owl-item
+ backface-visibility hidden
+ transform: translateZ(0) scale(1.0, 1.0)
+
+button,select
+ text-transform none
+
+button,input[type="button"],input[type="reset"],input[type="submit"],input[type="clear"]
+ cursor pointer
+ -webkit-appearance button
+ cursor pointer
+
+button[disabled],html input[disabled]
+ cursor default
+
+textarea
+ resize none
+
+address
+ font-style normal
+
+button::-moz-focus-inner,input[type="reset"]::-moz-focus-inner,input[type="button"]::-moz-focus-inner,input[type="submit"]::-moz-focus-inner,input[type="file"] > input[type="button"]::-moz-focus-inner
+ padding 0
+ border 0
+
+a
+ text-decoration: none
+ transition all 0.3s ease
+ &:active, &:hover, &:focus
+  outline 0
+
+p,h1,h2,h3,h4,h5
+ margin 0
+
+button
+ cursor pointer
+
+input, textarea, button
+ border 0
+ 
+main
+ display block
+
+ul
+ list-style none
+ margin 0
+ padding 0
+ 
+iframe
+ border 0px
+
+.mainwrapper_clearfix
+ clear()
